@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" > 
+
+    <ListView android:id="@+id/ghlist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="5dp"
+    android:stretchColumns="3"
+    android:layout_margin="6dp"
+    android:background="#FFFFFF"
+    android:layout_marginTop="-5dp" >
+    
+    <TableRow
+        android:layout_width="fill_parent">
+        
+<!-- **Asset name -->
+    <TextView android:id="@+id/soriname"
+        android:width="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:layout_marginLeft="-15dp"/>
+    
+    <!-- **Asset Allocation -->
+    <TextView android:id="@+id/alloc"
+        android:width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"/>
+    
+    <!-- **Asset maktval -->
+    <TextView android:id="@+id/mktval"
+        android:width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"/>
+</TableRow>
+</TableLayout>
+</LinearLayout>

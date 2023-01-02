@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<!--  *******************Header of the Dashboard ******************* -->
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:stretchColumns="2" >
+    
+    <!--  Header  Starts-->
+     <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:paddingTop="5dip"
+        android:orientation="horizontal" >
+                <!-- Logo Start-->
+                <LinearLayout
+                			android:layout_width="fill_parent"
+                			android:layout_height="wrap_content"
+                			android:gravity="left"
+                            android:layout_weight="1" >
+                
+                <Button android:id="@+id/btngoback"
+                        android:layout_width="90dip"
+                        android:layout_height="25dip"
+        				android:layout_marginRight="10dip"
+        				android:layout_marginLeft="12px"
+        				android:background="@drawable/back_to_main"
+        				android:gravity="left" />
+                </LinearLayout>
+                <LinearLayout
+                			android:layout_width="fill_parent"
+                			android:layout_height="wrap_content"
+                			android:gravity="left"
+                            android:layout_weight="1" >
+                <ImageView android:src="@drawable/top_holdings_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+        				    android:gravity="right" />
+                </LinearLayout>
+                <!-- Logo Ends -->
+                
+          
+            </TableRow>
+</TableLayout>
+<!-- ************************End of the the header*********************** -->
+
+<!-- ***********data column title************************** -->
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="17px"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="18dp" 
+    android:background="#B0B0B0"   
+     android:stretchColumns="7" >
+  <TableRow
+      android:background="#B0B0B0"
+      android:paddingTop="10px"
+      android:paddingBottom="10px"
+      android:paddingRight="10px">
+     <!-- **Asset id -->
+    <TextView android:id="@+id/hassetid"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:text="         ID"/>
+    
+    <!-- **Asset name -->
+    <TextView android:id="@+id/hassetname"
+        android:width="0px"
+        android:layout_weight="2"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:text="           Asset"/>
+    
+    <!-- **Asset maktval -->
+    <TextView android:id="@+id/hmktval"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text="Market Value"/>
+    
+    <!-- **Asset cost -->
+    <TextView android:id="@+id/hcost"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text="Cost"/>
+    
+    <!-- **Asset allocation -->
+    <TextView android:id="@+id/hallocation"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text="% Port"/>
+    
+    <!-- **Asset gl -->
+    <TextView android:id="@+id/hgl"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text="Gain/Loss"/>
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/hpergl"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text="% Gain/Loss"/>
+    
+</TableRow>
+</TableLayout>
+<!-- ***********end of the data column title*************** -->  
+
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp" >
+<!-- *************show the top holdings data *************** --> 
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+</TableLayout>
+</LinearLayout>

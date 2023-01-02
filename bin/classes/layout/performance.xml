@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" > 
+
+
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="1dp"
+    android:stretchColumns="9"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="#FFFFFF"
+    android:paddingRight="4dp" >
+    
+    <TableRow
+        android:layout_width="fill_parent">        
+    
+    <!-- **Asset name -->
+    <TextView android:id="@+id/soriname"
+        android:width="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="left"
+        android:layout_marginLeft="-10dp"
+        android:gravity="left"/>
+    
+    <!-- **Asset maktval -->
+    <TextView android:id="@+id/mktval"
+        android:width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:gravity="left"/>
+    
+    <!-- **Asset cost -->
+    <TextView android:id="@+id/returna"
+        android:width="0dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right"/>
+    
+    <!-- **Asset allocation -->
+    <TextView android:id="@+id/returnb"
+        android:width="0dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right"/>
+    
+    <!-- **Asset gl -->
+    <TextView android:id="@+id/returnc"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" />
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/returnd"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" />
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/returne"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" />
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/returnf"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" />
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/returng"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" />
+    
+   </TableRow> 
+ </TableLayout>
+ 
+</LinearLayout>

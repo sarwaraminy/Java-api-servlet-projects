@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" > 
+
+
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="3"
+    android:layout_marginTop="5dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="13dp"
+    android:background="#B0B0B0" >
+    
+    <TableRow
+        android:layout_width="fill_parent">        
+    <!-- **date-->
+    <TextView android:id="@+id/ch_date"
+        android:width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:layout_marginRight="8dp"
+        android:textStyle="bold" />
+    
+    <!-- ** return value -->
+    <TextView android:id="@+id/ret_value"
+        android:width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold" />
+    
+    <!-- **cum val -->
+    <TextView android:id="@+id/cum_val"
+        android:width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:textStyle="bold" />
+    
+   </TableRow> 
+ </TableLayout>
+ 
+</LinearLayout>

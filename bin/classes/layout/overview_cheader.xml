@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" > 
+
+
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="9"
+    android:layout_marginTop="5dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="13dp"
+    android:background="#B0B0B0" >
+    
+    <TableRow
+        android:layout_width="fill_parent">        
+    <!-- **Asset id -->
+    <TextView android:id="@+id/soriname"
+        android:width="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold" />
+    
+    <!-- **Asset name -->
+    <TextView android:id="@+id/mktval"
+        android:width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold" />
+    
+    <!-- **Asset maktval -->
+    <TextView android:id="@+id/ret1"
+        android:width="0dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold" />
+    
+    <!-- **Asset cost -->
+    <TextView android:id="@+id/ret2"
+        android:width="0dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold" />
+    
+    <!-- **Asset allocation -->
+    <TextView android:id="@+id/ret3"
+        android:width="0dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold" />
+    
+    <!-- **Asset gl -->
+    <TextView android:id="@+id/ret4"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" 
+        android:textStyle="bold" />
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/ret5"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" 
+        android:textStyle="bold" />
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/ret6"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right" 
+        android:textStyle="bold" />
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/ret7"
+        android:width="1dp"
+        android:layout_weight="0.4"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:paddingRight="5dp" 
+        android:textStyle="bold" />
+   </TableRow> 
+ </TableLayout>
+ 
+</LinearLayout>

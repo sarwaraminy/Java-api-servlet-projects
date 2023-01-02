@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:background="#DEDEDE" >
+        
+     
+<!--  *******************Header of the Dashboard ******************* -->
+<TableLayout android:id="@+id/htblayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-12dp"
+    android:stretchColumns="3" >
+    
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dip"
+        android:background="#DEDEDE"
+        android:layout_marginBottom="-8dp"
+        android:orientation="horizontal" >
+        
+        <LinearLayout
+                			android:layout_width="fill_parent"
+                			android:layout_height="wrap_content"
+                			android:gravity="left"
+                            android:layout_weight="1" >
+                            
+                           <CheckBox android:id="@+id/chkmpids"
+			                     android:layout_width="fill_parent"
+			                     android:layout_height="match_parent"
+			                     android:layout_marginLeft="11dip"
+			                     android:text="Match Partial IDs" /> 
+        </LinearLayout>
+    </TableRow>
+    <!--  Header  Starts-->
+     <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:paddingTop="5dip"
+        android:orientation="horizontal" >
+                
+             <LinearLayout android:orientation="vertical"
+                			android:layout_width="0dp"
+                			android:layout_height="wrap_content"
+                			android:gravity="left"
+                            android:layout_weight="1" >
+                            <SearchView
+					            android:id="@+id/search_view"
+					            android:layout_width="fill_parent"
+			                    android:layout_marginLeft="11dip"
+			                    android:layout_height="45dp"
+			                    android:iconifiedByDefault="false"
+			            	/>
+                 <!--  
+                <Button android:id="@+id/btnSearch"
+                        android:layout_width="155dip"
+                        android:layout_marginLeft="11dip"
+                        android:layout_height="30dip"
+                        android:background="@drawable/find_a_portfolio"
+                        android:onClick="showSearchDialog"/>
+                        -->
+                </LinearLayout>
+                <!-- Logo Start-->
+                <LinearLayout
+                			android:layout_width="0dp"
+                			android:layout_height="wrap_content"
+                			android:gravity="left"
+                            android:layout_weight="1" >
+                
+                <ImageView android:src="@drawable/logo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip" />
+                </LinearLayout>
+                <!-- Logo Ends -->
+                
+          <!-- help button-->
+          <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_weight="1" >
+                
+                <Button android:id="@+id/btnhelp"
+        				android:layout_width="35dip"
+                        android:layout_height="30dip"
+        				android:layout_marginRight="10dip"
+        				android:background="@drawable/help"
+        				android:onClick="showHelpDialog" />
+                
+                <Button android:id="@+id/btnLogout"
+                        android:layout_width="90dip"
+                        android:layout_height="35dip"
+        				android:layout_marginRight="10dip"
+        				android:background="@drawable/logout" />
+              </LinearLayout>
+            </TableRow>
+            
+</TableLayout>
+               
+ 
+<!-- ************the account information header********************* -->
+<TableLayout
+    				android:layout_width="fill_parent"
+    				android:layout_height="wrap_content"
+    				android:layout_marginTop="80dip"
+          		    android:layout_marginLeft="10dip"
+          		    android:layout_marginRight="10dip" 
+          		    android:background="@drawable/my_border"
+   				    android:stretchColumns="3" 
+   				    android:paddingBottom="3dp"> 
+   			<!-- title of columns -->
+            <TableRow
+       			 android:layout_width="fill_parent"
+        		 android:layout_height="fill_parent"
+        		 android:background="#DEDEDE"
+        		 android:padding="6dp"
+        		 android:layout_marginRight="2dp" >
+                
+                <!-- Portfoli title name -->
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+                
+                <TextView android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:textScaleX="2"
+                          android:text=" PORTFOLIO" />
+               </LinearLayout>
+               
+               <!-- portfolio statement -->
+               <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+                
+                <Button android:id="@+id/btnPortState"
+                        android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/portfoliostatement"
+		                android:onClick="showPerformance"
+		                android:text=" " />
+                
+               </LinearLayout>
+               <!-- asofdate -->
+               <LinearLayout android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1" >
+                
+                   <!-- put the textview and calender in to tablelayout -->
+                   <TableLayout android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:stretchColumns="1">
+                       <TableRow >
+                           <LinearLayout android:orientation="horizontal"
+                               android:layout_width="fill_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="right"
+                               android:gravity="right"
+                               android:layout_weight="1">
+                               
+                               <TextView android:id="@+id/dateDisplay"
+								    android:layout_width="fill_parent"
+								    android:layout_height="wrap_content"
+								    android:textStyle="bold"
+								    android:layout_gravity="right"
+								    android:gravity="right"
+								    android:text=""/>
+
+								  <Button android:id="@+id/pickDate"
+									    android:layout_width="50dp"
+									    android:layout_height="wrap_content"
+									    android:textSize="13dp"
+									    android:background="@drawable/calendar"
+									    android:text=" "/>
+                          </LinearLayout>
+                       </TableRow>
+                   </TableLayout>
+    </LinearLayout>
+  </TableRow>
+
+<!-- ************end of the account information header*************** -->
+     <!-- **************** showing the account info xml data -->    
+		<ListView
+		android:id="@+id/account_list"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"/>
+
+	<!-- ***************end of the account info ************** -->
+</TableLayout>	
+<!-- ************************end of the dashboard header************************ -->
+
+
+<!-- **************Summary part and Graph layout******************************** -->
+<!-- Summary part -->      
+<TableLayout
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginTop="215dip"
+  android:layout_marginLeft="10dip"
+  android:layout_marginRight="10dip" 
+  android:paddingBottom="20dp"
+  android:stretchColumns="2" >
+  <!-- the summary tab -->
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="#DEDEDE"
+      android:layout_marginTop="2dip"
+      android:layout_marginRight="2dip"
+      android:orientation="horizontal" >
+               
+        <!-- add new table layout for adjusting the summary reports -->
+        <!-- summary -->
+		 <LinearLayout android:orientation="vertical"
+			android:layout_width="0dp"
+			android:layout_height="fill_parent"
+			android:gravity="left"
+			android:paddingRight="10dp"
+			android:layout_weight="1" >
+             
+             <!-- ****** print a line ******************************** -->
+            <TableLayout
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent"
+		        android:background="@drawable/my_border"
+		        android:paddingBottom="3dp"
+		   		android:stretchColumns="1" >
+		   		<!-- the summary title -->
+				<TableRow
+					android:layout_width="30dp"
+					android:layout_height="20dp"
+					android:background="#DEDEDE"
+					android:layout_marginTop="2dip"
+					android:layout_marginRight="2dip"
+					android:orientation="horizontal" >
+         <!--  **************************************************************** -->
+        	<AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.78" >
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_x="0dp"
+            android:layout_y="0dp" >
+
+            <LinearLayout android:id="@+id/tabliner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+                <TextView 
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:textStyle="bold"
+                    android:textScaleX="2"
+                    android:textIsSelectable="false"
+                    android:layout_marginBottom="-40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"
+                    android:text="SUMMARY"/>
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="120dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:gravity="right" >
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1200dp" >
+                    
+
+                    <LinearLayout android:orientation="horizontal"
+                        android:id="@+id/tabtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="HOME"
+                        android:background="#FFFFFF" >
+                            	
+							<!-- **************** just show a text -->    
+								
+							<!-- ***************ed ************** -->
+           			</LinearLayout>
+           			
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="HOME"
+                        android:background="#FFFFFF" >
+                            	
+							<!-- **************** showing the YTD  xml data -->    
+								<ListView
+									android:id="@+id/mtd_list"
+									android:layout_width="fill_parent"
+									android:layout_height="fill_parent"
+									android:background="#FFFFFF" />
+							<!-- ***************end of YTD  ************** -->
+           			</LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="HOME"
+                        android:background="#FFFFFF" >
+ 
+                   <!-- **************** showing the YTD  xml data -->    
+						<ListView
+							android:id="@android:id/list"
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:background="#FFFFFF" />
+					<!-- ***************end of YTD  ************** -->
+                    
+                        </LinearLayout>
+                       
+                 </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </AbsoluteLayout>
+ </TableRow>
+ </TableLayout>
+</LinearLayout>		
+<!-- ************** end of Summary part layout************************ -->
+
+<!-- 2******************************************************** -->
+			              <LinearLayout android:orientation="vertical"
+									    android:layout_width="0dp"
+									    android:layout_height="wrap_content"
+									    android:gravity="right"
+									    android:layout_weight="1" >
+                      
+			                <TableLayout
+			    				android:layout_width="fill_parent"
+			    				android:layout_height="match_parent" 
+			          		    android:background="@drawable/my_border"
+			          		    android:paddingBottom="4dp"
+			          		    android:stretchColumns="2" >
+              
+						            <!-- the equity tab -->
+						            <TableRow
+						       			 android:layout_width="fill_parent"
+						        		 android:layout_height="wrap_content"
+						        		 android:background="#DEDEDE"
+						          		 android:layout_marginTop="2dip"
+						          		 android:layout_marginRight="2dip"
+						        		 android:orientation="horizontal" >
+						              
+						                <LinearLayout
+											  android:layout_width="wrap_content"
+											  android:layout_height="fill_parent"
+											  android:gravity="left"
+											  android:paddingRight="3dp"
+											  android:layout_weight="1" >
+               
+						<!-- *******show the sector name and market value ******************* -->
+						         
+								<ListView
+									android:id="@+id/grap_h_list"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" />
+							
+						<!-- *******end of the sector and market value*********************** -->
+						       </LinearLayout>
+              				</TableRow>  
+				          
+	<!-- ********************graph ************************************ -->					            
+<!-- *******************Data partion start******************************  -->
+            <!-- first row -->
+            
+            <TableRow
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:background="#FFFFFF"
+				android:layout_marginTop="2dip"
+				android:layout_marginRight="2dip"
+				android:orientation="vertical" >
+			
+              <LinearLayout android:orientation="vertical"
+			    android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:gravity="left"
+				android:paddingRight="3dp"
+			    android:layout_weight="1" >
+				
+                  <!-- create a table layout -->
+                <TableLayout android:layout_width="fill_parent"
+				    	android:layout_height="40dp"
+				        android:background="#F5F6F5"
+				        android:layout_gravity="right"
+				        android:stretchColumns="3">	
+				 	<TableRow>  					
+		                <Button android:id="@+id/btnShowSectors" 
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="40dp"
+		                    android:onClick="showSectors"
+		                    android:textStyle="bold"
+		                    android:layout_weight="1"
+		                    android:text="Show Allocation Summary" />
+		                
+		                <Button android:id="@+id/btnShowPieG" 
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="40dp"
+		                    android:onClick="showPieGraph"
+		                    android:textStyle="bold"
+		                    android:layout_weight="1"
+		                    android:background="@drawable/pie_iconfr"
+		                    android:text="" />
+		                
+		                <Button android:id="@+id/btnShowLineG" 
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="40dp"
+		                    android:onClick="showLineGraph"
+		                    android:textStyle="bold"
+		                    android:background="@drawable/line_icon"
+		                    android:layout_marginLeft="16dp"
+		                    android:layout_weight="1"
+		                    android:text="" />
+                </TableRow>
+				</TableLayout>							              
+				<LinearLayout
+				    android:orientation="vertical"
+				    android:id="@+id/pie_chart"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="left"
+				    android:gravity="left"
+				/>
+			
+			</LinearLayout>	
+			</TableRow>	
+       <!-- *******************Data partion end ******************************  -->			          
+	<!--  *******************end of the graph ************************* -->		
+              					</TableLayout>
+              				</LinearLayout>
+            				</TableRow>
+            			 </TableLayout>
+                   <ListView
+		            android:id="@+id/viewMatchAcct"
+		            android:layout_width="450dp"              
+		            android:layout_height="wrap_content"             
+		             android:transcriptMode="alwaysScroll" 
+		             android:background="#FFFFFF"             
+		             android:cacheColorHint="#FFFFFF"
+		             android:layout_marginTop="80dp"/>
+</RelativeLayout>

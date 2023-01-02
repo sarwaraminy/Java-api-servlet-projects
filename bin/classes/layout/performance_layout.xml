@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<!--  *******************Header of the Dashboard ******************* -->
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:stretchColumns="2" >
+    
+    <!--  Header  Starts-->
+     <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:paddingTop="5dip"
+        android:orientation="horizontal" >
+                <!-- Logo Start-->
+                <LinearLayout
+                			android:layout_width="fill_parent"
+                			android:layout_height="wrap_content"
+                			android:gravity="left"
+                            android:layout_weight="1" >
+                
+                <Button android:id="@+id/btngoback"
+                        android:layout_width="90dip"
+                        android:layout_height="25dip"
+        				android:layout_marginRight="10dip"
+        				android:layout_marginLeft="12px"
+        				android:background="@drawable/back_to_main"
+        				android:gravity="left" />
+                </LinearLayout>
+                <LinearLayout
+                			android:layout_width="fill_parent"
+                			android:layout_height="wrap_content"
+                			android:gravity="left"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="-10dp" >
+                <ImageView android:src="@drawable/top_performance_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+        				    android:gravity="right" />
+                </LinearLayout>
+                <!-- Logo Ends -->
+                
+          
+            </TableRow>
+</TableLayout>
+<!-- ************************End of the the header*********************** -->
+
+<TableLayout
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent"
+		        android:background="#F5F6F5"
+		        android:paddingBottom="10dp"
+		        android:layout_margin="15dp"
+		   		android:stretchColumns="1" >
+		   		<!-- the summary title -->
+				<TableRow
+					android:layout_width="30dp"
+					android:layout_height="20dp"
+					android:background="#F5F6F5"
+					android:orientation="horizontal" >
+         <!--  **************************************************************** -->
+        <!-- ***tab settings********** -->
+        <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.78" >
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_x="0dp"
+            android:layout_y="0dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+                
+                <TextView 
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:textStyle="bold"
+                    android:textScaleX="2"
+                    android:layout_marginBottom="-40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"
+                    android:text="PERFORMANCE"/>
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right" >
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF" >
+                    
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="HOME"
+                        android:orientation="vertical" >
+                            	
+		<!-- **************** showing the Overview  xml data --> 
+<!-- ***for the column heading*************************** -->   
+
+      <ListView android:id="@+id/overviewh"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content" />
+
+<!-- ****performance data list**************************** --> 
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F0" >
+    
+			<ListView
+				android:id="@+id/mtd_list"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"  />
+		<!-- ***************end of Overview  ************** -->
+ </TableLayout>                          
+</LinearLayout>
+ 
+<!-- ***************column header********************************** -->
+ <LinearLayout android:orientation="vertical"
+               android:id="@+id/tab2"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:contentDescription="HOME" >
+ <!-- ***for the column heading*************************** -->   
+     <!-- add the from and to calender and a go button in Point to Point tab -->
+     <!-- start********************************************************** -->
+       <TableLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:stretchColumns="4"
+		    android:paddingTop="3dp"
+		    android:layout_marginTop="4dp"
+		    android:background="@drawable/my_border" >
+			
+           <TableRow android:layout_width="fill_parent"
+               android:layout_height="20dp"
+               android:background="#F0F0F0" >
+               <!-- add from date -->
+               <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1" >
+                
+                   <!-- put the textview and calender in to tablelayout -->
+                   <TableLayout android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:stretchColumns="1">
+                       <TableRow >
+                           <LinearLayout android:orientation="horizontal"
+                               android:layout_width="fill_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="right"
+                               android:gravity="right"
+                               android:layout_weight="1">
+                               
+                               <TextView android:id="@+id/frmDateDisplay"
+								    android:layout_width="fill_parent"
+								    android:layout_height="fill_parent"
+								    android:textStyle="bold"
+								    android:layout_marginLeft="23pt"
+								    android:paddingLeft="5pt"
+								    android:paddingTop="10dp"
+								    android:background="#FFFFFF"
+								    android:text="January 01, 2012"/>
+
+								  <Button android:id="@+id/frmPickDate"
+									    android:layout_width="50dp"
+									    android:layout_height="wrap_content"
+									    android:textSize="13dp"
+									    android:background="@drawable/ptpcalendar"
+									    android:text=" "/>
+                          </LinearLayout>
+                       </TableRow>
+                   </TableLayout>
+    </LinearLayout>
+    
+               <!-- lable for to -->
+               <TextView android:id="@+id/txtToDateLebel"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:textStyle="bold"
+                   android:gravity="center"
+                   android:layout_weight="1"
+                   android:text="- to -"/>
+               
+               <!-- add from date -->
+               <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1" >
+                
+                   <!-- put the textview and calender in to tablelayout -->
+                   <TableLayout android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="right"
+                       android:stretchColumns="1">
+                       <TableRow >
+                           <LinearLayout android:orientation="horizontal"
+                               android:layout_width="fill_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="right"
+                               android:gravity="right"
+                               android:layout_weight="1">
+                               
+                               <TextView android:id="@+id/toDateDisplay"
+								    android:layout_width="fill_parent"
+								    android:layout_height="fill_parent"
+								    android:textStyle="bold"
+								    android:layout_marginLeft="23pt"
+								    android:paddingLeft="5pt"
+								    android:paddingTop="10dp"
+								    android:background="#FFFFFF"
+								    android:text="December 31, 2012"/>
+
+								  <Button android:id="@+id/toPickDate"
+									    android:layout_width="50dp"
+									    android:layout_height="wrap_content"
+									    android:textSize="13dp"
+									    android:background="@drawable/ptpcalendar"
+									    android:text=" "/>
+                          </LinearLayout>
+                       </TableRow>
+                   </TableLayout>
+    </LinearLayout>
+    
+               <!-- go button -->
+               <Button android:id="@+id/btnGo"
+                android:layout_width="30pt"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/ptp_go"
+                android:text=" "/>
+    
+           </TableRow>
+      </TableLayout>
+     <!-- end************************************************************ -->
+     
+     <!-- starting of point to point second rwo head ******************** -->
+     <!-- start********************************************************** -->
+       <TableLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:stretchColumns="3"
+		    android:paddingTop="3dp"
+		    android:layout_marginTop="3dp"
+		    android:background="@drawable/my_border" >
+           
+           <TableRow android:background="#F0F0F0">
+               <!-- Inception date Text View --> 
+	            <LinearLayout android:orientation="vertical"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1" >
+	               
+	               <TextView android:id="@+id/txtIncept" 
+	                   android:layout_width="fill_parent"
+	                   android:layout_height="wrap_content"
+	                   android:textStyle="bold"
+	                   android:paddingTop="5dp"
+	                   android:text=" "/>
+	          </LinearLayout>
+	          
+	          <!-- Daily Inception date Text View -->    
+	           <LinearLayout android:orientation="vertical"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1" >
+                       
+	               <TextView android:id="@+id/txtDailyIncept" 
+	                   android:layout_width="fill_parent"
+	                   android:layout_height="wrap_content"
+	                   android:textStyle="bold"
+	                   android:paddingTop="5dp"
+	                   android:text=""/>
+	          </LinearLayout>
+	          <!-- Cumulative Return Text View -->    
+	          <LinearLayout android:orientation="vertical"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1" >
+	               
+	               <TextView android:id="@+id/txtCumulativeRet" 
+	                   android:layout_width="fill_parent"
+	                   android:layout_height="wrap_content"
+	                   android:textStyle="bold"
+	                   android:paddingTop="5dp"
+	                   android:text=""/>
+	          </LinearLayout>
+           </TableRow>
+       </TableLayout>
+     <!-- end************************************************************ -->
+     <!-- start of Monthly or daily returns****************************** -->
+     
+       <TableLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:stretchColumns="1"
+		    android:paddingTop="3dp"
+		    android:layout_marginTop="3dp" >
+           
+           <TableRow android:background="#F0F0F0">
+               <TextView android:id="@+id/txtMonthOrDaily"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:textStyle="bold"
+	               android:paddingTop="5dp"
+                   android:text="  Monthly Returns" />
+           </TableRow>
+      </TableLayout>
+    <!-- end of the monthly or daily return ************************** -->
+           
+      <ListView android:id="@+id/ptp_header"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content" />
+
+<!-- ****performance data list**************************** -->
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F0" >
+    <!-- **************** showing the point to point  xml data -->   
+		<ListView
+			android:id="@+id/point_to_plist"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true" />
+	<!-- ***************end of YTD  ************** -->
+   </TableLayout>                   
+  </LinearLayout>                        
+                    <!-- Top Performance tab -->
+                    <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="HOME"
+                        android:orientation="vertical" >
+ 
+                   <!-- **************** showing the Top Performance  xml data --> 
+
+<!-- ***********data column title************************** -->
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="5px"
+    android:paddingTop="5dp"    
+     android:stretchColumns="7"
+     android:background="#B0B0B0" >
+  <TableRow>
+     <!-- **Asset id -->
+    <TextView android:id="@+id/hassetid"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:text=" Ticker"/>
+    
+    <!-- **Asset name -->
+    <TextView android:id="@+id/hassetname"
+        android:width="0px"
+        android:layout_weight="2"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:text="           Asset"/>
+    
+    <!-- **Asset maktval -->
+    <TextView android:id="@+id/hmktval"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text=" Total Return"/>
+    
+    <!-- **Asset cost -->
+    <TextView android:id="@+id/hcost"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text=" Total Earnings"/>
+    
+    <!-- **Asset allocation -->
+    <TextView android:id="@+id/hallocation"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text=" Market Value"/>
+    
+    <!-- **Asset gl -->
+    <TextView android:id="@+id/hgl"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text=" Allocation"/>
+    
+    <!-- **Asset pergl -->
+    <TextView android:id="@+id/hpergl"
+        android:width="0px"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:text=" Asset Class \nContribution"
+        android:paddingRight="5dp"/>
+    
+</TableRow>
+</TableLayout>
+<!-- ***********end of the data column title*************** -->   
+						<ListView
+							android:id="@android:id/list"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content" />
+					<!-- ***************end of YTD  ************** -->
+                    
+                        </LinearLayout>
+                       
+                 </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </AbsoluteLayout>
+ </TableRow>
+ </TableLayout>
+   
+
+    <TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:background="#F5F6F5" >
+<!-- *************show the top holdings data *************** --> 
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</TableLayout>
+</LinearLayout>
